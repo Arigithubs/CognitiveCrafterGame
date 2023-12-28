@@ -1,17 +1,3 @@
-/* Calming Aesthetics */
-body {
-    margin: 0;
-    overflow: hidden;
-}
-
-.game-container {
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-    filter: brightness(110%);
-    position: relative;
-}
-
 /* Enchanting Styles for Immersive Visuals */
 .particle {
     position: absolute;
@@ -77,4 +63,11 @@ body {
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-size: 14px;
     color: #333;
+    opacity: 0; /* Start with zero opacity */
+    transition: opacity 0.5s ease-in-out;
+}
+
+/* Fade in animation for Continued Consultation Message */
+#consoleMessage.active {
+    opacity: 1;
 }
