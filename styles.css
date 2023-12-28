@@ -12,61 +12,69 @@ body {
     position: relative;
 }
 
-/* Particle Magic for Serene Environment */
+/* Enchanting Styles for Immersive Visuals */
 .particle {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: #ffffff;
-    border-radius: 50%;
-    animation: float 8s infinite alternate;
-}
-
-@keyframes float {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
-}
-
-/* Celestial Elements */
-.constellation {
     position: absolute;
     width: 20px;
     height: 20px;
-    background: #ffffff;
+    background-color: rgba(255, 255, 255, 0.7);
     border-radius: 50%;
-    opacity: 0.5;
+    animation: floatAnimation 3s infinite ease-in-out alternate;
 }
 
-.star-trail {
-    position: absolute;
-    width: 1px;
-    height: 20px;
-    background: #ffffff;
-    opacity: 0.3;
-    animation: twinkle 5s infinite alternate;
+@keyframes floatAnimation {
+    0% {
+        transform: translateY(0);
+    }
+    100% {
+        transform: translateY(-20px);
+    }
 }
 
-@keyframes twinkle {
-    0% { opacity: 0.5; }
-    100% { opacity: 0.3; }
-}
-
-/* Puzzle Styling */
+/* Styles for Enchanting Puzzles */
 .puzzle {
     position: absolute;
     width: 40px;
     height: 40px;
-    background: #ffcc00;
-    border-radius: 50%;
+    background-color: #3498db;
+    color: #fff;
+    font-size: 24px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    font-size: 18px;
+    justify-content: center;
+    border-radius: 8px;
     cursor: pointer;
-    user-select: none;
     transition: transform 0.3s ease-in-out;
 }
 
 .puzzle:hover {
-    transform: scale(1.2);
+    transform: scale(1.1);
+}
+
+/* Styles for Game Container */
+#gameContainer {
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    background-color: #2c3e50;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Arial', sans-serif;
+}
+
+/* Styles for Continued Consultation Message */
+#consoleMessage {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 10px;
+    background-color: rgba(255, 255, 255, 0.9);
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    font-size: 14px;
+    color: #333;
 }
