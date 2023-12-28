@@ -1,3 +1,5 @@
+/* styles.css */
+
 body {
     margin: 0;
     overflow: hidden;
@@ -6,5 +8,11 @@ body {
 .game-container {
     width: 100vw;
     height: 100vh;
-    background: none;
+    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
+    animation: subtleMovement 10s infinite alternate;
+}
+
+@keyframes subtleMovement {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(5px); }
 }
