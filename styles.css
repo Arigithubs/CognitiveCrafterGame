@@ -10,9 +10,26 @@ body {
     height: 100vh;
     background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
     animation: subtleMovement 10s infinite alternate;
+    filter: brightness(110%);
+    position: relative;
 }
 
 @keyframes subtleMovement {
     0% { transform: translateY(0); }
     100% { transform: translateY(5px); }
+}
+
+/* Particle Magic */
+.particle {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background: #ffffff;
+    border-radius: 50%;
+    animation: float 8s infinite alternate;
+}
+
+@keyframes float {
+    0% { transform: translateY(0); }
+    100% { transform: translateY(-10px); }
 }
