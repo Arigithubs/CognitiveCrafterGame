@@ -52,8 +52,31 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    function createAdaptivePuzzles() {
-        // Enchant with adaptive puzzles that start simple and increase in complexity
-        // Code for creating adaptive puzzles goes here
+   // Continue inside the document.addEventListener block
+
+function createAdaptivePuzzles() {
+    // Enchant with adaptive puzzles that start simple and increase in complexity
+    for (let i = 0; i < 3; i++) {
+        createPuzzle();
     }
-});
+
+    function createPuzzle() {
+        const puzzle = document.createElement("div");
+        puzzle.className = "puzzle";
+        puzzle.style.top = `${Math.random() * 70 + 15}vh`;
+        puzzle.style.left = `${Math.random() * 70 + 15}vw`;
+        puzzle.textContent = "?";
+        container.appendChild(puzzle);
+
+        // Add event listener for puzzle interaction
+        puzzle.addEventListener("click", handlePuzzleClick);
+
+        function handlePuzzleClick() {
+            // Add logic for puzzle interaction, e.g., increasing complexity
+            puzzle.textContent = "✨";
+            puzzle.style.fontSize = "24px";
+            puzzle.style.pointerEvents = "none";
+        }
+    }
+}
+})
