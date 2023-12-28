@@ -1,13 +1,17 @@
-const container = document.getElementById("gameContainer");
+document.addEventListener("DOMContentLoaded", function () {
+    // JavaScript spells for initializing the game background and interactions
 
-// Core Interactions: Creating serene environment and adaptive puzzles
-createCalmingEnvironment();
-createAdaptivePuzzles();
+    const container = document.getElementById("gameContainer");
 
-function createCalmingEnvironment() {
-    // Enchant with soothing visuals and ambient sounds
-    createParticles();
-    createCelestialElements();
+    // Core Interactions: Creating serene environment and adaptive puzzles
+    createCalmingEnvironment();
+    createAdaptivePuzzles();
+
+    function createCalmingEnvironment() {
+        // Enchant with soothing visuals and ambient sounds
+        createParticles();
+        createCelestialElements();
+    }
 
     function createParticles() {
         // Enchant with gentle particles floating across the serene environment
@@ -47,9 +51,9 @@ function createCalmingEnvironment() {
             container.appendChild(starTrail);
         }
     }
-}
 
-function createAdaptivePuzzles() {
-    // Enchant with adaptive puzzles that start simple and increase in complexity
-    // Code for creating adaptive puzzles goes here
-}
+    function createAdaptivePuzzles() {
+        // Enchant with adaptive puzzles that start simple and increase in complexity
+        // Code for creating adaptive puzzles goes here
+    }
+});
