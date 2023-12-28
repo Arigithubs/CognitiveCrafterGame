@@ -1,30 +1,19 @@
-// script.js
-
 document.addEventListener("DOMContentLoaded", function () {
-    // JavaScript spells for initializing the game background
+    // JavaScript spells for initializing the game background and interactions
 
     const container = document.getElementById("gameContainer");
 
-    // Add celestial elements (constellations, star trails, particles) dynamically
-    for (let i = 0; i < 10; i++) {
-        createCelestialElement("constellation");
-        createCelestialElement("star-trail");
-        createParticle();
+    // Core Interactions: Creating serene environment and adaptive puzzles
+    createCalmingEnvironment();
+    createAdaptivePuzzles();
+
+    function createCalmingEnvironment() {
+        // Enchant with soothing visuals and ambient sounds
+        // Code for creating a serene environment goes here
     }
 
-    function createCelestialElement(className) {
-        const element = document.createElement("div");
-        element.className = className;
-        element.style.top = `${Math.random() * 100}vh`;
-        element.style.left = `${Math.random() * 100}vw`;
-        container.appendChild(element);
-    }
-
-    function createParticle() {
-        const particle = document.createElement("div");
-        particle.className = "particle";
-        particle.style.top = `${Math.random() * 100}vh`;
-        particle.style.left = `${Math.random() * 100}vw`;
-        container.appendChild(particle);
+    function createAdaptivePuzzles() {
+        // Enchant with adaptive puzzles that start simple and increase in complexity
+        // Code for creating adaptive puzzles goes here
     }
 });
