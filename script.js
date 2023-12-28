@@ -78,5 +78,117 @@ document.addEventListener("DOMContentLoaded", function () {
 
 // Expert Summoning for Continued Consultation
 function summonExpert() {
+    // Fetch the continued consultation message element
+    const consoleMessage = document.getElementById("consoleMessage");
+
+    // Add 'active' class to trigger fade-in animation
+    consoleMessage.classList.add("active");
+
     console.log("🔮 Continued consultation with the Expert Council of Unmatched Sophistication...");
+    
+    // Summoning CSS Maestro for further refinement
+    summonCSSMaestro();
 }
+
+// Summoning CSS Maestro for further refinement
+function summonCSSMaestro() {
+    console.log("🎨 Summoning CSS Maestro for additional refinement...");
+
+    // Fetch the game container element
+    const container = document.getElementById("gameContainer");
+
+    // Fetch the console message element
+    const consoleMessage = document.getElementById("consoleMessage");
+
+    // Apply CSS styles to the container for a polished look
+    container.style.boxShadow = "0 0 20px rgba(255, 255, 255, 0.2)";
+    container.style.borderRadius = "10px";
+
+    // Update the console message for additional refinement
+    consoleMessage.textContent = "🌟 CSS Maestro has arrived for additional refinement. Witness the magic unfold! 🌟";
+
+    // Expert advice on CSS refinement
+    refineWithCSS();
+}
+
+// Expert advice on CSS refinement
+function refineWithCSS() {
+    console.log("💫 CSS Maestro advises: Let's refine the styles for an even more enchanting experience.");
+
+    // Fetch the puzzle elements
+    const puzzles = document.querySelectorAll(".puzzle");
+
+    // Apply a hover effect for a shimmering effect on puzzles
+    puzzles.forEach(puzzle => {
+        puzzle.addEventListener("mouseover", handlePuzzleHover);
+        puzzle.addEventListener("mouseout", handlePuzzleMouseout);
+
+        function handlePuzzleHover() {
+            puzzle.style.transform = "scale(1.1)";
+        }
+
+        function handlePuzzleMouseout() {
+            puzzle.style.transform = "scale(1)";
+        }
+    });
+
+    // Continue the journey with CSS refinement
+    console.log("✨ CSS Maestro has woven additional spells for a refined and enchanting appearance!");
+    console.log("🌈 Let the magic continue to captivate, Master Arigithubs!");
+
+    // Now, let's bring in an expert for magical sound effects
+    summonSoundMagician();
+}
+
+// Summoning Sound Magician for magical sound effects
+function summonSoundMagician() {
+    console.log("🎶 Summoning the Sound Magician for magical sound effects...");
+
+    // Fetch the game container element
+    const container = document.getElementById("gameContainer");
+
+    // Apply sound effects with the help of the Sound Magician
+    container.addEventListener("click", playMagicalSound);
+
+    function playMagicalSound() {
+        // Use your preferred method to play a magical sound here
+        console.log("🔊 A magical sound echoes through the enchanted realm!");
+
+        // Now, let's consult the Expert Council for the next steps
+        consultExpertCouncil();
+    }
+}
+
+// Consulting the Expert Council for next steps
+function consultExpertCouncil() {
+    console.log("🧙‍♂️ Consulting the Expert Council for guidance on the next steps...");
+
+    // Summon the Expert Council for further advice
+    summonExpertCouncil();
+}
+
+// Summoning the Expert Council for further advice
+function summonExpertCouncil() {
+    console.log("🔮 Summoning the Expert Council for further advice...");
+
+    // Fetch the console message element
+    const consoleMessage = document.getElementById("consoleMessage");
+
+    // Update the console message for the Expert Council's advice
+    consoleMessage.textContent = "🔮 The Expert Council advises: As the enchantment progresses, consider incorporating more interactive elements and challenges for a truly immersive experience. Create quests, puzzles, and unlockable achievements to engage players on a deeper level.";
+
+    // Conclude the magical journey with a thank you message
+    concludeMagicalJourney();
+}
+
+// Concluding the magical journey with a thank you message
+function concludeMagicalJourney() {
+    console.log("🌟 Thank you, Master Arigithubs, for embarking on this enchanting journey! May your game continue to captivate and delight!");
+
+    // Update the console message with a concluding thank you
+    const consoleMessage = document.getElementById("consoleMessage");
+    consoleMessage.textContent = "🌟 Thank you, Master Arigithubs, for embarking on this enchanting journey! May your game continue to captivate and delight!";
+}
+
+// Begin the magical journey by summoning the Expert Council
+summonExpert();
