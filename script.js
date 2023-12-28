@@ -11,6 +11,8 @@ document.addEventListener("DOMContentLoaded", function () {
         // Enchant with soothing visuals and ambient sounds
         createParticles();
         createCelestialElements();
+        // Play a magical sound to enhance the enchantment
+        playMagicalSound();
     }
 
     function createParticles() {
@@ -92,4 +94,24 @@ document.addEventListener("DOMContentLoaded", function () {
 function summonExpert() {
     // Replace this with the actual summoning logic
     console.log("Summoning an expert for consultation...");
+}
+
+// Sound Enchantment Spell
+function playMagicalSound() {
+    // Creating a magical audio context
+    const audioContext = new (window.AudioContext || window.webkitAudioContext)();
+
+    // Creating a magical oscillator
+    const oscillator = audioContext.createOscillator();
+
+    // Connect the oscillator to the audio context's destination (speakers)
+    oscillator.connect(audioContext.destination);
+
+    // Start the enchanting sound
+    oscillator.start();
+
+    // Stop the sound after a brief moment (adjust the duration as needed)
+    setTimeout(() => {
+        oscillator.stop();
+    }, 500);
 }
