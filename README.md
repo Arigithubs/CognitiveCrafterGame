@@ -26,4 +26,4 @@ We welcome fellow wizards to contribute their magic to Cognitive Crafter. Feel f
 
 May your contributions amplify the enchantment of Cognitive Crafter!
 
-Happy coding! 🚀🔮
+Happy coding! 🚀🔮# CognitiveCrafterGame
