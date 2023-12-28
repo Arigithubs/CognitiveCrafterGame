@@ -33,3 +33,27 @@ body {
     0% { transform: translateY(0); }
     100% { transform: translateY(-10px); }
 }
+
+/* Celestial Elements */
+.constellation {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    background: #ffffff;
+    border-radius: 50%;
+    opacity: 0.5;
+}
+
+.star-trail {
+    position: absolute;
+    width: 1px;
+    height: 20px;
+    background: #ffffff;
+    opacity: 0.3;
+    animation: twinkle 5s infinite alternate;
+}
+
+@keyframes twinkle {
+    0% { opacity: 0.5; }
+    100% { opacity: 0.3; }
+}
