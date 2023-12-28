@@ -1,72 +1,82 @@
-/* Calming Aesthetics */
-body {
-    margin: 0;
-    overflow: hidden;
-}
+document.addEventListener("DOMContentLoaded", function () {
+    // JavaScript spells for initializing the game background and interactions
 
-.game-container {
-    width: 100vw;
-    height: 100vh;
-    background: linear-gradient(to bottom, #0f0c29, #302b63, #24243e);
-    filter: brightness(110%);
-    position: relative;
-}
+    const container = document.getElementById("gameContainer");
 
-/* Particle Magic for Serene Environment */
-.particle {
-    position: absolute;
-    width: 2px;
-    height: 2px;
-    background: #ffffff;
-    border-radius: 50%;
-    animation: float 8s infinite alternate;
-}
+    // Core Interactions: Creating serene environment and adaptive puzzles
+    createCalmingEnvironment();
+    createAdaptivePuzzles();
 
-@keyframes float {
-    0% { transform: translateY(0); }
-    100% { transform: translateY(-10px); }
-}
+    function createCalmingEnvironment() {
+        // Enchant with soothing visuals and ambient sounds
+        createParticles();
+        createCelestialElements();
+    }
 
-/* Celestial Elements */
-.constellation {
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    background: #ffffff;
-    border-radius: 50%;
-    opacity: 0.5;
-}
+    function createParticles() {
+        // Enchant with gentle particles floating across the serene environment
+        for (let i = 0; i < 10; i++) {
+            createParticle();
+        }
 
-.star-trail {
-    position: absolute;
-    width: 1px;
-    height: 20px;
-    background: #ffffff;
-    opacity: 0.3;
-    animation: twinkle 5s infinite alternate;
-}
+        function createParticle() {
+            const particle = document.createElement("div");
+            particle.className = "particle";
+            particle.style.top = `${Math.random() * 100}vh`;
+            particle.style.left = `${Math.random() * 100}vw`;
+            container.appendChild(particle);
+        }
+    }
 
-@keyframes twinkle {
-    0% { opacity: 0.5; }
-    100% { opacity: 0.3; }
-}
+    function createCelestialElements() {
+        // Enchant with star constellations and gentle star trails
+        for (let i = 0; i < 5; i++) {
+            createConstellation();
+            createStarTrail();
+        }
 
-/* Puzzle Styling */
-.puzzle {
-    position: absolute;
-    width: 40px;
-    height: 40px;
-    background: #ffcc00;
-    border-radius: 50%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    font-size: 18px;
-    cursor: pointer;
-    user-select: none;
-    transition: transform 0.3s ease-in-out;
-}
+        function createConstellation() {
+            const constellation = document.createElement("div");
+            constellation.className = "constellation";
+            constellation.style.top = `${Math.random() * 100}vh`;
+            constellation.style.left = `${Math.random() * 100}vw`;
+            container.appendChild(constellation);
+        }
 
-.puzzle:hover {
-    transform: scale(1.2);
+        function createStarTrail() {
+            const starTrail = document.createElement("div");
+            starTrail.className = "star-trail";
+            starTrail.style.top = `${Math.random() * 100}vh`;
+            starTrail.style.left = `${Math.random() * 100}vw`;
+            container.appendChild(starTrail);
+        }
+    }
+
+   // Continue inside the document.addEventListener block
+
+function createAdaptivePuzzles() {
+    // Enchant with adaptive puzzles that start simple and increase in complexity
+    for (let i = 0; i < 3; i++) {
+        createPuzzle();
+    }
+
+    function createPuzzle() {
+        const puzzle = document.createElement("div");
+        puzzle.className = "puzzle";
+        puzzle.style.top = `${Math.random() * 70 + 15}vh`;
+        puzzle.style.left = `${Math.random() * 70 + 15}vw`;
+        puzzle.textContent = "?";
+        container.appendChild(puzzle);
+
+        // Add event listener for puzzle interaction
+        puzzle.addEventListener("click", handlePuzzleClick);
+
+        function handlePuzzleClick() {
+            // Add logic for puzzle interaction, e.g., increasing complexity
+            puzzle.textContent = "✨";
+            puzzle.style.fontSize = "24px";
+            puzzle.style.pointerEvents = "none";
+        }
+    }
 }
+})
