@@ -1,4 +1,4 @@
-// Begin the magical journey when the document is fully loaded
+// Embark on the magical journey when the document is fully loaded
 document.addEventListener("DOMContentLoaded", function () {
     // Container where the enchantment will unfold
     const container = document.getElementById("gameContainer");
@@ -12,15 +12,11 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to enchant with immersive visuals
     function createImmersiveVisuals() {
-        for (let i = 0; i < 5; i++) {
-            createVisualElement("particle");
-        }
+        Array.from({ length: 5 }, createVisualElement);
 
-        function createVisualElement(className) {
+        function createVisualElement() {
             const visualElement = document.createElement("div");
-            visualElement.className = className;
-            visualElement.style.top = `${Math.random() * 100}vh`;
-            visualElement.style.left = `${Math.random() * 100}vw`;
+            setAttributes(visualElement, { class: "particle", style: { top: `${Math.random() * 100}vh`, left: `${Math.random() * 100}vw` } });
             container.appendChild(visualElement);
         }
 
@@ -29,27 +25,19 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Function to craft enchanting puzzles
     function createEnchantingPuzzles() {
-        for (let i = 0; i < 3; i++) {
-            createPuzzleElement();
-        }
+        Array.from({ length: 3 }, createPuzzleElement);
 
         function createPuzzleElement() {
             const puzzleElement = document.createElement("div");
-            puzzleElement.className = "puzzle";
-            puzzleElement.style.top = `${Math.random() * 70 + 15}vh`;
-            puzzleElement.style.left = `${Math.random() * 70 + 15}vw`;
-            puzzleElement.textContent = "?";
+            setAttributes(puzzleElement, { class: "puzzle", style: { top: `${Math.random() * 70 + 15}vh`, left: `${Math.random() * 70 + 15}vw` }, textContent: "?" });
             container.appendChild(puzzleElement);
 
             puzzleElement.addEventListener("click", handlePuzzleClick);
 
             function handlePuzzleClick() {
-                puzzleElement.textContent = "✨";
-                puzzleElement.style.fontSize = "24px";
-                puzzleElement.style.pointerEvents = "none";
-                puzzleElement.style.transform = "scale(1.2)";
+                setAttributes(puzzleElement, { textContent: "✨", style: { fontSize: "24px", pointerEvents: "none", transform: "scale(1.2)" } });
                 setTimeout(() => {
-                    puzzleElement.style.transform = "scale(1)";
+                    setAttributes(puzzleElement, { style: { transform: "scale(1)" } });
                 }, 300);
             }
         }
@@ -85,7 +73,7 @@ function summonExpert() {
     consoleMessage.classList.add("active");
 
     console.log("🔮 Continued consultation with the Expert Council of Unmatched Sophistication...");
-    
+
     // Summoning CSS Maestro for further refinement
     summonCSSMaestro();
 }
@@ -101,8 +89,7 @@ function summonCSSMaestro() {
     const consoleMessage = document.getElementById("consoleMessage");
 
     // Apply CSS styles to the container for a polished look
-    container.style.boxShadow = "0 0 20px rgba(255, 255, 255, 0.2)";
-    container.style.borderRadius = "15px";
+    setAttributes(container.style, { boxShadow: "0 0 20px rgba(255, 255, 255, 0.2)", borderRadius: "15px" });
 
     // Update the console message for additional refinement
     consoleMessage.textContent = "🌟 CSS Maestro has arrived for additional refinement. Witness the magic unfold! 🌟";
@@ -124,11 +111,11 @@ function refineWithCSS() {
         puzzle.addEventListener("mouseout", handlePuzzleMouseout);
 
         function handlePuzzleHover() {
-            puzzle.style.transform = "scale(1.1)";
+            setAttributes(puzzle.style, { transform: "scale(1.1)" });
         }
 
         function handlePuzzleMouseout() {
-            puzzle.style.transform = "scale(1)";
+            setAttributes(puzzle.style, { transform: "scale(1)" });
         }
     });
 
@@ -192,3 +179,14 @@ function concludeMagicalJourney() {
 
 // Begin the magical journey by summoning the Expert Council
 summonExpert();
+
+// Function to set multiple attributes on an element
+function setAttributes(element, attributes) {
+    for (const [key, value] of Object.entries(attributes)) {
+        if (key === 'style' && typeof value === 'object') {
+            Object.assign(element[key], value);
+        } else {
+            element[key] = value;
+        }
+    }
+}
