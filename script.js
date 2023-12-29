@@ -102,7 +102,7 @@ function summonCSSMaestro() {
 
     // Apply CSS styles to the container for a polished look
     container.style.boxShadow = "0 0 20px rgba(255, 255, 255, 0.2)";
-    container.style.borderRadius = "10px";
+    container.style.borderRadius = "15px";
 
     // Update the console message for additional refinement
     consoleMessage.textContent = "🌟 CSS Maestro has arrived for additional refinement. Witness the magic unfold! 🌟";
