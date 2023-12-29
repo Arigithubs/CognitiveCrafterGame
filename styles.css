@@ -22,7 +22,7 @@
     position: absolute;
     width: 40px;
     height: 40px;
-    background-color: #3498db;
+    background-color: #5e80b6;
     color: #fff;
     font-size: 24px;
     display: flex;
@@ -30,11 +30,12 @@
     justify-content: center;
     border-radius: 8px;
     cursor: pointer;
-    transition: transform 0.3s ease-in-out;
+    transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
 }
 
 .puzzle:hover {
     transform: scale(1.1);
+    background-color: #738fa3;
 }
 
 /* Styles for Game Container */
@@ -43,7 +44,7 @@
     width: 100vw;
     height: 100vh;
     overflow: hidden;
-    background: linear-gradient(to bottom, #141e30, #243b55);
+    background: linear-gradient(to bottom, #1a1f2b, #2f3b4e);
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -65,11 +66,10 @@
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     font-size: 16px;
     color: #333;
-    opacity: 0; /* Start with zero opacity */
+    opacity: 0;
     transition: opacity 0.5s ease-in-out;
 }
 
-/* Fade in animation for Continued Consultation Message */
 #consoleMessage.active {
     opacity: 1;
 }
